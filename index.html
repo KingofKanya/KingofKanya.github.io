@@ -69,6 +69,105 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-ping不通服务器公共IP地址" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/" class="article-date">
+  <time class="dt-published" datetime="2024-07-16T14:27:02.739Z" itemprop="datePublished">2024-07-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/">ping不通服务器公共IP地址</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1.问题描述"></a>1.问题描述</h1><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/314aeab9a7e74c1fbb37de49e61b839c.png" alt="在这里插入图片描述"><br>ping不通服务器的公共ip地址</p>
+<h1 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h1><p>在 Azure 门户中在服务器的网络安全组（NSG）中添加允许 ICMP 流量的规则</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/b2f381793138445889e961a3634f57d5.png" alt="在这里插入图片描述"><br>点击创建入站端口规则<br><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/36a47f20b7e94b698e5220b2d5e86361.png" alt="在这里插入图片描述"><br>如上图配置<br>创建成功后,重新打开terminal再次连接<br><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/ff38ac9b51f64df491512a83f3d8a625.png" alt="在这里插入图片描述"></p>
+<h1 id="3-原理"><a href="#3-原理" class="headerlink" title="3.原理"></a>3.原理</h1><p>ping 是一个网络诊断工具，利用 ICMP 的回显请求和回显应答消息来测试网络连通性</p>
+<p>在本例中,服务器网络配置阻止了 ICMP 流量,所以导致ping不通</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/" data-id="clyoihwwi0001oks8a0r912ef" data-title="ping不通服务器公共IP地址" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-mac安装部署nginx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/" class="article-date">
+  <time class="dt-published" datetime="2024-07-16T14:26:42.849Z" itemprop="datePublished">2024-07-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/">mac安装部署nginx</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-安装homebrew"><a href="#1-安装homebrew" class="headerlink" title="1.安装homebrew"></a>1.安装homebrew</h1><p>homebrew是mac上的包管理工具</p>
+<p>查看homebrew是否安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew --version</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/e2c479afc9fe43dab9d8d08ecaafcf35.png" alt="在这里插入图片描述"></p>
+<h1 id="2-安装nginx并启动"><a href="#2-安装nginx并启动" class="headerlink" title="2.安装nginx并启动"></a>2.安装nginx并启动</h1><h2 id="2-1-安装nginx"><a href="#2-1-安装nginx" class="headerlink" title="2.1 安装nginx"></a>2.1 安装nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install nginx</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/d52bc3e73c1a4f08ac837db526edf5b4.png" alt="在这里插入图片描述"></p>
+<h2 id="2-2-查看nginx相关信息"><a href="#2-2-查看nginx相关信息" class="headerlink" title="2.2 查看nginx相关信息"></a>2.2 查看nginx相关信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info nginx</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/08e6cae1d65f4bb4b5a788c1fb95b135.png" alt="在这里插入图片描述"><br>前端页面存放位置<br>&#x2F;opt&#x2F;homebrew&#x2F;var&#x2F;www</p>
+<p>nginx配置文件<br>&#x2F;opt&#x2F;homebrew&#x2F;etc&#x2F;nginx&#x2F;nginx.conf<br>默认端口为8080</p>
+<h2 id="2-3-启动nginx"><a href="#2-3-启动nginx" class="headerlink" title="2.3 启动nginx"></a>2.3 启动nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start nginx</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/43c2fab919264a5d9e28a094a076f7f3.png" alt="在这里插入图片描述"><br>确认 Nginx 是否正在运行，可以运行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services list</span><br></pre></td></tr></table></figure>
+<p>如果 Nginx 正在运行，你将看到相关的输出</p>
+<h1 id="3-访问localhost-8080"><a href="#3-访问localhost-8080" class="headerlink" title="3.访问localhost:8080"></a>3.访问localhost:8080</h1><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/843b779feb344dd4a1552fbb447f6087.png" alt="在这里插入图片描述"><br>看到这个页面nginx就配置完成了</p>
+<h1 id="4-配置前端项目"><a href="#4-配置前端项目" class="headerlink" title="4.配置前端项目"></a>4.配置前端项目</h1><p>这里以黑马商城项目为例</p>
+<h2 id="4-1配置conf文件"><a href="#4-1配置conf文件" class="headerlink" title="4.1配置conf文件"></a>4.1配置conf文件</h2><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/2acd66f4fadd4bd18fcf5cdd522cd007.png" alt="在这里插入图片描述"><br>设置监听端口和文件目录</p>
+<h2 id="4-2-放置html前端文件"><a href="#4-2-放置html前端文件" class="headerlink" title="4.2 放置html前端文件"></a>4.2 放置html前端文件</h2><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/c6e92e9849884eecb4bac3999f79cb36.png" alt="在这里插入图片描述"></p>
+<h2 id="4-3-测试访问"><a href="#4-3-测试访问" class="headerlink" title="4.3 测试访问"></a>4.3 测试访问</h2><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/1bef6b3e84b341918108ec4f9d70513f.png" alt="在这里插入图片描述"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/" data-id="clyoihwwe0000oks8bzwt6ze4" data-title="mac安装部署nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-服务器用docker配置mysql并本地连接" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" class="article-date">
@@ -122,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" data-id="clyoi9jad0000kis85p1jce0h" data-title="服务器用docker配置mysql并本地连接" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" data-id="clyoihwwj0002oks8elc87jq9" data-title="服务器用docker配置mysql并本地连接" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -163,6 +262,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/">ping不通服务器公共IP地址</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/">mac安装部署nginx</a>
+          </li>
         
           <li>
             <a href="/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/">服务器用docker配置mysql并本地连接</a>
