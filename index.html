@@ -81,29 +81,38 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="1-云服务商防火墙设置"><a href="#1-云服务商防火墙设置" class="headerlink" title="1.云服务商防火墙设置"></a>1.云服务商防火墙设置</h1><p><img src="https://i-blog.csdnimg.cn/direct/cb4ab72c50414028852b4075129f4d6c.png" alt="在这里插入图片描述"></p>
+        <h1 id="1-云服务商防火墙设置"><a href="#1-云服务商防火墙设置" class="headerlink" title="1.云服务商防火墙设置"></a>1.云服务商防火墙设置</h1><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/cb4ab72c50414028852b4075129f4d6c-20240716221925310.png" alt="在这里插入图片描述"></p>
 <p>允许3306端口连接(mysql默认端口)</p>
-<h1 id="2-创建数据卷挂载目录及文件"><a href="#2-创建数据卷挂载目录及文件" class="headerlink" title="2.创建数据卷挂载目录及文件"></a>2.创建数据卷挂载目录及文件</h1><p><img src="https://i-blog.csdnimg.cn/direct/94e644aaac2f4e02adcc95aec9b10009.png" alt="在这里插入图片描述"></p>
+<h1 id="2-创建数据卷挂载目录及文件"><a href="#2-创建数据卷挂载目录及文件" class="headerlink" title="2.创建数据卷挂载目录及文件"></a>2.创建数据卷挂载目录及文件</h1><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/94e644aaac2f4e02adcc95aec9b10009.png" alt="在这里插入图片描述"></p>
 <h1 id="3-docker运行mysql"><a href="#3-docker运行mysql" class="headerlink" title="3.docker运行mysql"></a>3.docker运行mysql</h1><h2 id="3-1创建一个通用网络"><a href="#3-1创建一个通用网络" class="headerlink" title="3.1创建一个通用网络"></a>3.1创建一个通用网络</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create hm-net</span><br></pre></td></tr></table></figure>
+
 <h2 id="3-2查看docker网络"><a href="#3-2查看docker网络" class="headerlink" title="3.2查看docker网络"></a>3.2查看docker网络</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i-blog.csdnimg.cn/direct/75a804cbd6504bd6b426a1d4eb13d094.png" alt="在这里插入图片描述"></p>
-<h2 id="3-3在docker-run之前-确保文件夹和文件权限"><a href="#3-3在docker-run之前-确保文件夹和文件权限" class="headerlink" title="3.3在docker run之前,确保文件夹和文件权限"></a>3.3在docker run之前,确保文件夹和文件权限</h2><p><del><strong>卡了我n久!!!!!!!</strong></del><br>之前报的错误如下<br><img src="https://i-blog.csdnimg.cn/direct/6853af39658c4a7a801ccdc9337e05d3.png" alt="在这里插入图片描述">从日志信息中可以看到，MySQL 容器在启动过程中遇到了权限问题。具体来说：</p>
-<ol>
-<li>配置文件权限问题：<br>• mysqld: File ‘&#x2F;etc&#x2F;mysql&#x2F;conf.d&#x2F;hm.cnf’ not found (OS errno 13 - Permission denied)</li>
-<li>初始化 SQL 文件权限问题：<br>• &#x2F;usr&#x2F;local&#x2F;bin&#x2F;docker-entrypoint.sh: line 75: &#x2F;docker-entrypoint-initdb.d&#x2F;hmall.sql: Permission denied<br>  所以在运行前,修改权限<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R 999:999 /home/azureuser/mysql/conf</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 644 /home/azureuser/mysql/conf/*.cnf</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R 999:999 /home/azureuser/mysql/init</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 644 /home/azureuser/mysql/init/*.sql</span><br></pre></td></tr></table></figure></li>
-</ol>
+
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/75a804cbd6504bd6b426a1d4eb13d094.png" alt="在这里插入图片描述"></p>
+<h2 id="3-3在docker-run之前-确保文件夹和文件权限"><a href="#3-3在docker-run之前-确保文件夹和文件权限" class="headerlink" title="3.3在docker run之前,确保文件夹和文件权限"></a>3.3在docker run之前,确保文件夹和文件权限</h2><p><del><strong>卡了我n久!!!!!!!</strong></del><br>之前报的错误如下<br><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/6853af39658c4a7a801ccdc9337e05d3.png" alt="在这里插入图片描述">从日志信息中可以看到，MySQL 容器在启动过程中遇到了权限问题。具体来说：</p>
+<pre><code>1.  配置文件权限问题：
+      • mysqld: File &#39;/etc/mysql/conf.d/hm.cnf&#39; not found (OS errno 13 - Permission denied)
+2.  初始化 SQL 文件权限问题：
+      • /usr/local/bin/docker-entrypoint.sh: line 75: /docker-entrypoint-initdb.d/hmall.sql: Permission denied
+    所以在运行前,修改权限
+</code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R 999:999 /home/azureuser/mysql/conf</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 644 /home/azureuser/mysql/conf/*.cnf</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chown</span> -R 999:999 /home/azureuser/mysql/init</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">chmod</span> -R 644 /home/azureuser/mysql/init/*.sql</span><br></pre></td></tr></table></figure>
+
 <h2 id="4-创建并运行mysql"><a href="#4-创建并运行mysql" class="headerlink" title="4.创建并运行mysql"></a>4.创建并运行mysql</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name mysql \</span><br><span class="line">  -p 3306:3306 \</span><br><span class="line">  -e TZ=Asia/Shanghai \</span><br><span class="line">  -e MYSQL_ROOT_PASSWORD=123 \</span><br><span class="line">  -v /home/azureuser/mysql/data:/var/lib/mysql \</span><br><span class="line">  -v /home/azureuser/mysql/conf:/etc/mysql/conf.d \</span><br><span class="line">  -v /home/azureuser/mysql/init:/docker-entrypoint-initdb.d \</span><br><span class="line">  --network hm-net\</span><br><span class="line">  mysql</span><br></pre></td></tr></table></figure>
-<p><img src="https://i-blog.csdnimg.cn/direct/20e4f320d1374041b36c121aa1eeb6c6.png" alt="在这里插入图片描述"><br>查看日志</p>
+
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/20e4f320d1374041b36c121aa1eeb6c6.png" alt="在这里插入图片描述"><br>查看日志</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs mysql</span><br></pre></td></tr></table></figure>
-<p><img src="https://i-blog.csdnimg.cn/direct/32ca9c219e5a4ed7a0bff2641e3d1be4.png" alt="在这里插入图片描述"><br>查看mysql运行情况</p>
+
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/32ca9c219e5a4ed7a0bff2641e3d1be4.png" alt="在这里插入图片描述"><br>查看mysql运行情况</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-<p><img src="https://i-blog.csdnimg.cn/direct/f2306b4d553e4dcdaccbfe4d45062b74.png" alt="在这里插入图片描述"></p>
-<h1 id="5-本地连接mysql"><a href="#5-本地连接mysql" class="headerlink" title="5.本地连接mysql"></a>5.本地连接mysql</h1><p>确保完成了第一步的设置<br><img src="https://i-blog.csdnimg.cn/direct/3362e373829f4f8384106ed939bb730e.png" alt="在这里插入图片描述"></p>
+
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/f2306b4d553e4dcdaccbfe4d45062b74.png" alt="在这里插入图片描述"></p>
+<h1 id="5-本地连接mysql"><a href="#5-本地连接mysql" class="headerlink" title="5.本地连接mysql"></a>5.本地连接mysql</h1><p>确保完成了第一步的设置<br><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/3362e373829f4f8384106ed939bb730e.png" alt="在这里插入图片描述"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" data-id="clyohpm0o0000j3s873nifi1n" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" data-id="clyoi36e80000y8s88nps0zmv" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
