@@ -69,6 +69,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hexo博客域名配置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/07/26/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time class="dt-published" datetime="2024-07-26T01:31:43.808Z" itemprop="datePublished">2024-07-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: hexo博客域名配置</span><br><span class="line">author: 红豆刨冰</span><br></pre></td></tr></table></figure>
+
+<p>接hexo搭建博客一文</p>
+<h1 id="1-域名配置"><a href="#1-域名配置" class="headerlink" title="1.域名配置"></a>1.域名配置</h1><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240726101552165.png" alt="image-20240726101552165"></p>
+<p>当需要将域名指向另一个域名，再由另一个域名提供 IP 地址，就需要添加 CNAME 记录</p>
+<p>主机记录就是域名前缀，常见用法有：</p>
+<p><strong>www：</strong>解析后的域名为<a target="_blank" rel="noopener" href="http://www.hdbb.xyz/">www.hdbb.xyz</a></p>
+<p><strong>@：</strong>直接解析主域名 <a href="">hdbb.xyz</a></p>
+<h1 id="2-github-pages配置"><a href="#2-github-pages配置" class="headerlink" title="2.github pages配置"></a>2.github pages配置</h1><p>![image-20240726102057852](..&#x2F;..&#x2F;..&#x2F;..&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240726102057852.png)</p>
+<h1 id="3-hexo配置"><a href="#3-hexo配置" class="headerlink" title="3.hexo配置"></a>3.hexo配置</h1><p>在完成前两步后,已经能通过个人域名访问托管在github的博客了</p>
+<p>但存在一个问题,就是每次hexo d重新部署后,配置的 GitHub Pages 自定义域名消失</p>
+<h2 id="背景知识"><a href="#背景知识" class="headerlink" title="背景知识"></a>背景知识</h2><h3 id="nojekyll-文件"><a href="#nojekyll-文件" class="headerlink" title=".nojekyll 文件"></a><code>.nojekyll</code> 文件</h3><ol>
+<li><p><strong>作用</strong>：</p>
+<ul>
+<li><code>.nojekyll</code> 文件用于告诉 GitHub Pages 不要使用 Jekyll 来生成静态网站。如果项目中有以 <code>_</code> 开头的文件或文件夹（例如 <code>_config.yml</code>），默认情况下，Jekyll 会忽略这些文件。创建一个 <code>.nojekyll</code> 文件可以避免这种情况，使 GitHub Pages 直接使用用户提供的静态文件，而不进行额外的处理。</li>
+</ul>
+</li>
+<li><p><strong>使用场景</strong>：</p>
+<ul>
+<li>如果站点不是基于 Jekyll 构建的，例如使用 Hexo、Hugo 或其他静态网站生成器，则需要在项目根目录下添加 <code>.nojekyll</code> 文件，以确保所有文件都能正确部署和访问。</li>
+</ul>
+</li>
+</ol>
+<h3 id="CNAME-文件"><a href="#CNAME-文件" class="headerlink" title="CNAME 文件"></a><code>CNAME</code> 文件</h3><ol>
+<li><p><strong>作用</strong>：</p>
+<ul>
+<li><code>CNAME</code> 文件用于配置自定义域名。该文件的内容应该是你的自定义域名，例如 <code>www.hdbb.xyz</code>。当 GitHub Pages 看到 <code>CNAME</code> 文件时，它会将该域名绑定到 GitHub Pages 站点，使用户可以通过自定义域名访问站点。</li>
+</ul>
+</li>
+<li><p><strong>使用场景</strong>：</p>
+<ul>
+<li>当希望使用自己的域名而不是 GitHub 提供的 <code>username.github.io</code> 域名来访问站点时，需要在项目根目录下创建一个 <code>CNAME</code> 文件，并在该文件中写入自定义域名。</li>
+</ul>
+</li>
+</ol>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240726103208285.png" alt="image-20240726103208285"></p>
+<p>创建deploy.sh和CNAME文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line"><span class="built_in">cp</span> CNAME public/</span><br><span class="line"><span class="built_in">cp</span> .nojekyll public/</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>然后每次部署时，使用 .&#x2F;deploy.sh 来替代 hexo d</p>
+<p><strong><a href="www.hdbb.xyz">个人博客</a></strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/07/26/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/" data-id="clz24k6rv0000j5s8aab15mc0" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Spring注入bean发现多个候选bean错误" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/07/21/Spring%E6%B3%A8%E5%85%A5bean%E5%8F%91%E7%8E%B0%E5%A4%9A%E4%B8%AA%E5%80%99%E9%80%89bean%E9%94%99%E8%AF%AF/" class="article-date">
@@ -116,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/21/Spring%E6%B3%A8%E5%85%A5bean%E5%8F%91%E7%8E%B0%E5%A4%9A%E4%B8%AA%E5%80%99%E9%80%89bean%E9%94%99%E8%AF%AF/" data-id="clz20nji100033ls85xmwaqhe" data-title="Spring注入bean发现多个候选bean错误" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/21/Spring%E6%B3%A8%E5%85%A5bean%E5%8F%91%E7%8E%B0%E5%A4%9A%E4%B8%AA%E5%80%99%E9%80%89bean%E9%94%99%E8%AF%AF/" data-id="clz24k6s30003j5s836hq6xpp" data-title="Spring注入bean发现多个候选bean错误" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -194,7 +263,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/17/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&github%20pages%E9%83%A8%E7%BD%B2&picgo+typora%E5%9B%BE%E5%BA%8A/" data-id="clz20nji000013ls87qw1azam" data-title="hexo搭建博客&amp;github pages部署&amp;picgo+typora图床" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/17/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&github%20pages%E9%83%A8%E7%BD%B2&picgo+typora%E5%9B%BE%E5%BA%8A/" data-id="clz24k6s20001j5s84jjy7gyi" data-title="hexo搭建博客&amp;github pages部署&amp;picgo+typora图床" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -237,7 +306,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/" data-id="clz20njhv00003ls8g55e3xyr" data-title="ping不通服务器公共IP地址" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/" data-id="clz24k6s30002j5s8aqgo8rb3" data-title="ping不通服务器公共IP地址" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -293,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/" data-id="clz20nji100023ls876c14hqf" data-title="mac安装部署nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/" data-id="clz24k6s40004j5s83s552cau" data-title="mac安装部署nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -359,7 +428,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" data-id="clz20nji100043ls86u2kf9p9" data-title="服务器用docker配置mysql并本地连接" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/" data-id="clz24k6s40005j5s879fg3zca" data-title="服务器用docker配置mysql并本地连接" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -402,6 +471,10 @@
       <ul>
         
           <li>
+            <a href="/2024/07/26/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2024/07/21/Spring%E6%B3%A8%E5%85%A5bean%E5%8F%91%E7%8E%B0%E5%A4%9A%E4%B8%AA%E5%80%99%E9%80%89bean%E9%94%99%E8%AF%AF/">Spring注入bean发现多个候选bean错误</a>
           </li>
         
@@ -415,10 +488,6 @@
         
           <li>
             <a href="/2024/07/16/mac%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2nginx/">mac安装部署nginx</a>
-          </li>
-        
-          <li>
-            <a href="/2024/07/16/%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8docker%E9%85%8D%E7%BD%AEmysql%E5%B9%B6%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5/">服务器用docker配置mysql并本地连接</a>
           </li>
         
       </ul>
