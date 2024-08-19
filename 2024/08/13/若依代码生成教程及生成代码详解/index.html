@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   
   
-  <title>服务器用docker配置mysql并本地连接 | 红豆刨冰</title>
+  <title>若依代码生成教程及生成代码详解 | 红豆刨冰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数据  2.目录生成2.1菜单生成 路由地址–&gt;我也不知道干啥用 2.2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="服务器用docker配置mysql并本地连接">
+<meta property="og:title" content="若依代码生成教程及生成代码详解">
 <meta property="og:url" content="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="红豆刨冰">
 <meta property="og:description" content="若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数据  2.目录生成2.1菜单生成 路由地址–&gt;我也不知道干啥用 2.2">
@@ -24,6 +24,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813165149476.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813165521321.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144513145.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144557044.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144621388.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110251110.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110457013.png">
@@ -36,7 +37,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816141945758.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816155331461.png">
 <meta property="article:published_time" content="2024-08-13T07:31:34.758Z">
-<meta property="article:modified_time" content="2024-08-19T15:12:05.844Z">
+<meta property="article:modified_time" content="2024-08-19T15:18:51.213Z">
 <meta property="article:author" content="红豆刨冰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813153637400.png">
@@ -108,7 +109,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      服务器用docker配置mysql并本地连接
+      若依代码生成教程及生成代码详解
     </h1>
   
 
@@ -163,7 +164,7 @@
 
 <p>建立菜单用的</p>
 <h3 id="3-3前端代码"><a href="#3-3前端代码" class="headerlink" title="3.3前端代码"></a>3.3前端代码</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144513145.png" alt="image-20240815144513145"></p>
-<p>![image-20240815144557044](..&#x2F;..&#x2F;..&#x2F;..&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240815144557044.png)</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144557044.png" alt="image-20240815144557044"></p>
 <p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144621388.png" alt="image-20240815144621388"></p>
 <h1 id="树表增删改查"><a href="#树表增删改查" class="headerlink" title="树表增删改查"></a>树表增删改查</h1><h2 id="1-表生成-1"><a href="#1-表生成-1" class="headerlink" title="1.表生成"></a>1.表生成</h2><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110251110.png" alt="image-20240816110251110"></p>
 <h2 id="2-目录生成-1"><a href="#2-目录生成-1" class="headerlink" title="2.目录生成"></a>2.目录生成</h2><h3 id="2-1编辑代码生成配置"><a href="#2-1编辑代码生成配置" class="headerlink" title="2.1编辑代码生成配置"></a>2.1编辑代码生成配置</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110457013.png" alt="image-20240816110457013"></p>
@@ -203,11 +204,12 @@
 <p>Categories继承了TreeEntity,TreeEntity中有parentId属性</p>
 <h1 id="主子表增删改查"><a href="#主子表增删改查" class="headerlink" title="主子表增删改查"></a>主子表增删改查</h1><p>TODO</p>
 <p>遇到了再说</p>
+<p><strong><a target="_blank" rel="noopener" href="https://www.hdbb.xyz/">个人博客</a></strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" data-id="cm014wwjn00060bs873v72tqi" data-title="服务器用docker配置mysql并本地连接" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" data-id="cm0156wfl00063ps85lca4g1a" data-title="若依代码生成教程及生成代码详解" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -258,7 +260,7 @@
       <ul>
         
           <li>
-            <a href="/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/">服务器用docker配置mysql并本地连接</a>
+            <a href="/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/">若依代码生成教程及生成代码详解</a>
           </li>
         
           <li>
