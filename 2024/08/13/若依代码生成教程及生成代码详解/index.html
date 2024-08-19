@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>红豆刨冰</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="12title: 若依代码生成教程及生成代码详解author: 红豆刨冰  若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="红豆刨冰">
+<meta property="og:url" content="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:site_name" content="红豆刨冰">
+<meta property="og:description" content="12title: 若依代码生成教程及生成代码详解author: 红豆刨冰  若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813153637400.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815111701734.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813154024960.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813162141875.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813162206292.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813162423865.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813163849233.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813164909408.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813165149476.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813165521321.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144513145.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144621388.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110251110.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110457013.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110507599.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110808655.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110953585.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816111138154.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816111311687.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816114228885.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816141945758.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816155331461.png">
+<meta property="article:published_time" content="2024-08-13T07:31:34.758Z">
+<meta property="article:modified_time" content="2024-08-19T15:01:06.095Z">
+<meta property="article:author" content="红豆刨冰">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813153637400.png">
+  
+    <link rel="alternate" href="/atom.xml" title="红豆刨冰" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">红豆刨冰</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-若依代码生成教程及生成代码详解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2024-08-13T07:31:34.758Z" itemprop="datePublished">2024-08-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 若依代码生成教程及生成代码详解</span><br><span class="line">author: 红豆刨冰</span><br></pre></td></tr></table></figure>
+
+<p>若依官方代码生成的文档–&gt; <a target="_blank" rel="noopener" href="https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90">https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90</a></p>
+<p>官方文档太过简略,对新手不友好</p>
+<h1 id="单表增删改查"><a href="#单表增删改查" class="headerlink" title="单表增删改查"></a>单表增删改查</h1><h2 id="1-表生成"><a href="#1-表生成" class="headerlink" title="1.表生成"></a>1.表生成</h2><p>设计表</p>
+<p>表的设计一定要详细完善,考虑周到,这样不用返工</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813153637400.png" alt="image-20240813153637400"></p>
+<p>插入示例数据</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815111701734.png" alt="image-20240815111701734"></p>
+<h2 id="2-目录生成"><a href="#2-目录生成" class="headerlink" title="2.目录生成"></a>2.目录生成</h2><h3 id="2-1菜单生成"><a href="#2-1菜单生成" class="headerlink" title="2.1菜单生成"></a>2.1菜单生成</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813154024960.png" alt="image-20240813154024960"></p>
+<p>路由地址–&gt;我也不知道干啥用</p>
+<h3 id="2-2编辑代码生成配置"><a href="#2-2编辑代码生成配置" class="headerlink" title="2.2编辑代码生成配置"></a>2.2编辑代码生成配置</h3><p>在系统工具代码生成中,点击导入,导入对应的数据表,进入编辑页面</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813162141875.png" alt="image-20240813162141875"></p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813162206292.png" alt="image-20240813162206292"></p>
+<p>字段信息这边,如果在创建数据表就已经完善,这边便无需修改</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813162423865.png" alt="image-20240813162423865"></p>
+<p>生成模板–&gt;单表的增删改查</p>
+<p>生成包路径–&gt;对应自己写的代码的包路径</p>
+<p>生成模块名–&gt;前端的模块名,与后端无关</p>
+<p>生成业务名–&gt;后端controller类上@RequestMapping 请求路径</p>
+<p>生成功能名–&gt;用作类描述</p>
+<p>上级菜单–&gt;选生图管理</p>
+<h3 id="2-3代码导入执行"><a href="#2-3代码导入执行" class="headerlink" title="2.3代码导入执行"></a>2.3代码导入执行</h3><p>生成的文件</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813163849233.png" alt="image-20240813163849233"></p>
+<p>sql脚本在sys_menu中添加菜单和按钮</p>
+<p>将这些代码粘贴到对应位置,重启前端和后端服务,并执行sql语句.</p>
+<p>执行会报错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">The injection point has the following annotations:</span><br><span class="line">	- @org.springframework.beans.factory.annotation.Autowired(required=true)</span><br></pre></td></tr></table></figure>
+
+<p>是mapper层没有加注解@Mapper,加上即可</p>
+<p>最后运行代码看到效果</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813164909408.png" alt="image-20240813164909408"></p>
+<h3 id="2-4前端优化"><a href="#2-4前端优化" class="headerlink" title="2.4前端优化"></a>2.4前端优化</h3><p>在自动生成代码的基础上,可以做一些自己的修改</p>
+<p>这里我对显示url不满意</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813165149476.png" alt="image-20240813165149476"></p>
+<p>使用el-image组件,将图片url预览出来<br><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813165521321.png" alt="image-20240813165521321"></p>
+<h2 id="3-代码详解"><a href="#3-代码详解" class="headerlink" title="3.代码详解"></a>3.代码详解</h2><h3 id="3-1后端代码"><a href="#3-1后端代码" class="headerlink" title="3.1后端代码"></a>3.1后端代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/models&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SdModelsController</span> <span class="keyword">extends</span> <span class="title class_">BaseController</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> ISdModelsService sdModelsService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 查询SD模型库列表</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@RequiresPermissions(&quot;mj:models:list&quot;)</span></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/list&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> TableDataInfo <span class="title function_">list</span><span class="params">(SdModels sdModels)</span></span><br><span class="line">    &#123;</span><br><span class="line">        startPage();</span><br><span class="line">        List&lt;SdModels&gt; list = sdModelsService.selectSdModelsList(sdModels);</span><br><span class="line">        <span class="keyword">return</span> getDataTable(list);</span><br><span class="line">    &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>@RequestMapping(“&#x2F;models”)</p>
+<p>models便是上文提到过的模块业务名</p>
+<p>SdModelsController继承了BaseController–&gt;web层通用数据处理</p>
+<p>方法上有@RequiresPermissions进行权限认</p>
+<p>startPage()  设置请求分页数据</p>
+<p>查询和搜索用了同一个方法,请求都是list,携带参数不同</p>
+<p><code>SdModels sdModels</code>是由Spring自动创建并填充的，它从HTTP请求中获取数据，并通过Spring的自动数据绑定机制将这些数据注入到<code>SdModels</code>对象中</p>
+<h3 id="3-2-sql脚本"><a href="#3-2-sql脚本" class="headerlink" title="3.2 sql脚本"></a>3.2 sql脚本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">-- 菜单 SQL</span><br><span class="line">insert into sys_menu (menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_by, create_time, update_by, update_time, remark)</span><br><span class="line">values(&#x27;SD模型库&#x27;, &#x27;1081&#x27;, &#x27;1&#x27;, &#x27;models&#x27;, &#x27;mj/models/index&#x27;, 1, 0, &#x27;C&#x27;, &#x27;0&#x27;, &#x27;0&#x27;, &#x27;mj:models:list&#x27;, &#x27;#&#x27;, &#x27;admin&#x27;, sysdate(), &#x27;&#x27;, null, &#x27;SD模型库菜单&#x27;);</span><br><span class="line"></span><br><span class="line">-- 按钮父菜单ID</span><br><span class="line">SELECT @parentId := LAST_INSERT_ID();</span><br><span class="line"></span><br><span class="line">-- 按钮 SQL</span><br><span class="line">insert into sys_menu (menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_by, create_time, update_by, update_time, remark)</span><br><span class="line">values(&#x27;SD模型库查询&#x27;, @parentId, &#x27;1&#x27;,  &#x27;#&#x27;, &#x27;&#x27;, 1, 0, &#x27;F&#x27;, &#x27;0&#x27;, &#x27;0&#x27;, &#x27;mj:models:query&#x27;,        &#x27;#&#x27;, &#x27;admin&#x27;, sysdate(), &#x27;&#x27;, null, &#x27;&#x27;);</span><br><span class="line"></span><br><span class="line">insert into sys_menu (menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_by, create_time, update_by, update_time, remark)</span><br><span class="line">values(&#x27;SD模型库新增&#x27;, @parentId, &#x27;2&#x27;,  &#x27;#&#x27;, &#x27;&#x27;, 1, 0, &#x27;F&#x27;, &#x27;0&#x27;, &#x27;0&#x27;, &#x27;mj:models:add&#x27;,          &#x27;#&#x27;, &#x27;admin&#x27;, sysdate(), &#x27;&#x27;, null, &#x27;&#x27;);</span><br><span class="line"></span><br><span class="line">insert into sys_menu (menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_by, create_time, update_by, update_time, remark)</span><br><span class="line">values(&#x27;SD模型库修改&#x27;, @parentId, &#x27;3&#x27;,  &#x27;#&#x27;, &#x27;&#x27;, 1, 0, &#x27;F&#x27;, &#x27;0&#x27;, &#x27;0&#x27;, &#x27;mj:models:edit&#x27;,         &#x27;#&#x27;, &#x27;admin&#x27;, sysdate(), &#x27;&#x27;, null, &#x27;&#x27;);</span><br><span class="line"></span><br><span class="line">insert into sys_menu (menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_by, create_time, update_by, update_time, remark)</span><br><span class="line">values(&#x27;SD模型库删除&#x27;, @parentId, &#x27;4&#x27;,  &#x27;#&#x27;, &#x27;&#x27;, 1, 0, &#x27;F&#x27;, &#x27;0&#x27;, &#x27;0&#x27;, &#x27;mj:models:remove&#x27;,       &#x27;#&#x27;, &#x27;admin&#x27;, sysdate(), &#x27;&#x27;, null, &#x27;&#x27;);</span><br><span class="line"></span><br><span class="line">insert into sys_menu (menu_name, parent_id, order_num, path, component, is_frame, is_cache, menu_type, visible, status, perms, icon, create_by, create_time, update_by, update_time, remark)</span><br><span class="line">values(&#x27;SD模型库导出&#x27;, @parentId, &#x27;5&#x27;,  &#x27;#&#x27;, &#x27;&#x27;, 1, 0, &#x27;F&#x27;, &#x27;0&#x27;, &#x27;0&#x27;, &#x27;mj:models:export&#x27;,       &#x27;#&#x27;, &#x27;admin&#x27;, sysdate(), &#x27;&#x27;, null, &#x27;&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>建立菜单用的</p>
+<h3 id="3-3前端代码"><a href="#3-3前端代码" class="headerlink" title="3.3前端代码"></a>3.3前端代码</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144513145.png" alt="image-20240815144513145"></p>
+<p>![image-20240815144557044](..&#x2F;..&#x2F;..&#x2F;..&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20240815144557044.png)</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815144621388.png" alt="image-20240815144621388"></p>
+<h1 id="树表增删改查"><a href="#树表增删改查" class="headerlink" title="树表增删改查"></a>树表增删改查</h1><h2 id="1-表生成-1"><a href="#1-表生成-1" class="headerlink" title="1.表生成"></a>1.表生成</h2><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110251110.png" alt="image-20240816110251110"></p>
+<h2 id="2-目录生成-1"><a href="#2-目录生成-1" class="headerlink" title="2.目录生成"></a>2.目录生成</h2><h3 id="2-1编辑代码生成配置"><a href="#2-1编辑代码生成配置" class="headerlink" title="2.1编辑代码生成配置"></a>2.1编辑代码生成配置</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110457013.png" alt="image-20240816110457013"></p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110507599.png" alt="image-20240816110507599"></p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110808655.png" alt="image-20240816110808655"></p>
+<h3 id="2-2代码导入执行"><a href="#2-2代码导入执行" class="headerlink" title="2.2代码导入执行"></a>2.2代码导入执行</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816110953585.png" alt="image-20240816110953585"></p>
+<p>代码导入步骤同单表.</p>
+<p>效果如下</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816111138154.png" alt="image-20240816111138154"></p>
+<h3 id="2-3前端优化"><a href="#2-3前端优化" class="headerlink" title="2.3前端优化"></a>2.3前端优化</h3><p>可见,树形的下拉分类已经实现,但是第一列显示父类id</p>
+<p>修改index.vue</p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816111311687.png" alt="image-20240816111311687"></p>
+<p>修改后效果如上</p>
+<h2 id="3-代码详解-1"><a href="#3-代码详解-1" class="headerlink" title="3.代码详解"></a>3.代码详解</h2><h3 id="查询list方法"><a href="#查询list方法" class="headerlink" title="查询list方法"></a>查询list方法</h3><p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816114228885.png" alt="image-20240816114228885"></p>
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816141945758.png" alt="image-20240816141945758"></p>
+<p>handleTree 函数的作用是将平面结构的树形数组数据转换为嵌套的树形结构,写在&#x2F;utils&#x2F;ruoyi.js中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 构造树型结构数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; data 数据源</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; id id字段 默认 &#x27;id&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; parentId 父节点字段 默认 &#x27;parentId&#x27;</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; children 孩子节点字段 默认 &#x27;children&#x27;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">handleTree</span>(<span class="params">data, id, parentId, children</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> config = &#123;</span><br><span class="line">    <span class="attr">id</span>: id || <span class="string">&#x27;id&#x27;</span>,</span><br><span class="line">    <span class="attr">parentId</span>: parentId || <span class="string">&#x27;parentId&#x27;</span>,</span><br><span class="line">    <span class="attr">childrenList</span>: children || <span class="string">&#x27;children&#x27;</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> childrenListMap = &#123;&#125;;</span><br><span class="line">  <span class="keyword">var</span> nodeIds = &#123;&#125;;</span><br><span class="line">  <span class="keyword">var</span> tree = [];</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 构建 childrenListMap 和 nodeIds</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> d <span class="keyword">of</span> data) &#123;</span><br><span class="line">    <span class="keyword">let</span> parentId = d[config.<span class="property">parentId</span>];</span><br><span class="line">    <span class="keyword">if</span> (childrenListMap[parentId] == <span class="literal">null</span>) &#123;</span><br><span class="line">      childrenListMap[parentId] = [];</span><br><span class="line">    &#125;</span><br><span class="line">    nodeIds[d[config.<span class="property">id</span>]] = d;</span><br><span class="line">    childrenListMap[parentId].<span class="title function_">push</span>(d);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 构建根节点</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> d <span class="keyword">of</span> data) &#123;</span><br><span class="line">    <span class="keyword">let</span> parentId = d[config.<span class="property">parentId</span>];</span><br><span class="line">    <span class="keyword">if</span> (nodeIds[parentId] == <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="comment">//如果节点的父节点为null即为根节点</span></span><br><span class="line">      tree.<span class="title function_">push</span>(d);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 递归构建子节点</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> t <span class="keyword">of</span> tree) &#123;</span><br><span class="line">    <span class="title function_">adaptToChildrenList</span>(t);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">adaptToChildrenList</span>(<span class="params">o</span>) &#123;</span><br><span class="line">    <span class="comment">//如果有子节点,添加进去</span></span><br><span class="line">    <span class="keyword">if</span> (childrenListMap[o[config.<span class="property">id</span>]] !== <span class="literal">null</span>) &#123;</span><br><span class="line">      o[config.<span class="property">childrenList</span>] = childrenListMap[o[config.<span class="property">id</span>]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//如果子节点不为null,则遍历子节点,再递归调用adaptToChildrenList</span></span><br><span class="line">    <span class="keyword">if</span> (o[config.<span class="property">childrenList</span>]) &#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">let</span> c <span class="keyword">of</span> o[config.<span class="property">childrenList</span>]) &#123;</span><br><span class="line">        <span class="title function_">adaptToChildrenList</span>(c);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>变量解释</strong></p>
+<ul>
+<li><p>config: 用来存储函数内部使用的字段名称配置。</p>
+</li>
+<li><p>childrenListMap: 用来存储每个节点的子节点列表，键是父节点的 id，值是一个数组，包含了所有该父节点的直接子节点。</p>
+</li>
+<li><p>nodeIds: 用来存储所有节点的映射，键是节点的 id，值是节点对象。</p>
+</li>
+<li><p>tree: 用来存储最终的树结构根节点</p>
+</li>
+</ul>
+<p>原本使用父类id进行查询,只会返回儿子</p>
+<p>修改查询的service层实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 查询分类列表</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> categories 分类信息，包含查询条件</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span> 所有符合条件的分类列表，包括所有子分类</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="meta">@Override</span></span><br><span class="line">   <span class="keyword">public</span> List&lt;Categories&gt; <span class="title function_">selectCategoriesList</span><span class="params">(Categories categories)</span> &#123;</span><br><span class="line">       <span class="keyword">if</span> (categories.getParentId() == <span class="literal">null</span>) &#123;</span><br><span class="line">           <span class="keyword">return</span> categoriesMapper.selectCategoriesList(categories);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="comment">// 首先获取顶层分类列表</span></span><br><span class="line">       List&lt;Categories&gt; topCategories = categoriesMapper.selectCategoriesList(categories);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 创建一个列表用于存储所有分类，包括子分类</span></span><br><span class="line">       List&lt;Categories&gt; allCategories = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 对每个顶层分类进行递归查询</span></span><br><span class="line">       <span class="keyword">for</span> (Categories category : topCategories) &#123;</span><br><span class="line">           allCategories.add(category);</span><br><span class="line">           <span class="comment">// 递归查找子分类并加入到列表中</span></span><br><span class="line">           allCategories.addAll(getAllSubCategories(category));</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> allCategories;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * 递归获取所有子分类</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> parentCategory 父分类</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@return</span> 所有子分类列表</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="keyword">private</span> List&lt;Categories&gt; <span class="title function_">getAllSubCategories</span><span class="params">(Categories parentCategory)</span> &#123;</span><br><span class="line">       <span class="comment">// 创建一个列表用于存储子分类</span></span><br><span class="line">       List&lt;Categories&gt; subCategories = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 创建查询条件，查找该父分类的所有子分类</span></span><br><span class="line">       <span class="type">Categories</span> <span class="variable">query</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Categories</span>();</span><br><span class="line">       query.setParentId(parentCategory.getId());</span><br><span class="line">       List&lt;Categories&gt; childCategories = categoriesMapper.selectCategoriesList(query);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 对每个子分类进行递归查询</span></span><br><span class="line">       <span class="keyword">for</span> (Categories childCategory : childCategories) &#123;</span><br><span class="line">           subCategories.add(childCategory);</span><br><span class="line">           subCategories.addAll(getAllSubCategories(childCategory));</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">return</span> subCategories;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816155331461.png" alt="image-20240816155331461"></p>
+<h3 id="实体类Categories"><a href="#实体类Categories" class="headerlink" title="实体类Categories"></a>实体类Categories</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Categories</span> <span class="keyword">extends</span> <span class="title class_">TreeEntity</span></span><br></pre></td></tr></table></figure>
+
+<p>Categories继承了TreeEntity,TreeEntity中有parentId属性</p>
+<h1 id="主子表增删改查"><a href="#主子表增删改查" class="headerlink" title="主子表增删改查"></a>主子表增删改查</h1><p>TODO</p>
+<p>遇到了再说</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" data-id="cm014u38p0005xss81vhuhmwk" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2024/07/26/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo博客域名配置</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/26/hexo%E5%8D%9A%E5%AE%A2%E5%9F%9F%E5%90%8D%E9%85%8D%E7%BD%AE/">hexo博客域名配置</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/21/Spring%E6%B3%A8%E5%85%A5bean%E5%8F%91%E7%8E%B0%E5%A4%9A%E4%B8%AA%E5%80%99%E9%80%89bean%E9%94%99%E8%AF%AF/">Spring注入bean发现多个候选bean错误</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/17/hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2&github%20pages%E9%83%A8%E7%BD%B2&picgo+typora%E5%9B%BE%E5%BA%8A/">hexo搭建博客&amp;github pages部署&amp;picgo+typora图床</a>
+          </li>
+        
+          <li>
+            <a href="/2024/07/16/ping%E4%B8%8D%E9%80%9A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E5%85%B1IP%E5%9C%B0%E5%9D%80/">ping不通服务器公共IP地址</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 红豆刨冰<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
