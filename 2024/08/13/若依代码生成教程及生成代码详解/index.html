@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   
   
-  <title>红豆刨冰</title>
+  <title>服务器用docker配置mysql并本地连接 | 红豆刨冰</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="12title: 若依代码生成教程及生成代码详解author: 红豆刨冰  若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数">
+  <meta name="description" content="若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数据  2.目录生成2.1菜单生成 路由地址–&gt;我也不知道干啥用 2.2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="红豆刨冰">
+<meta property="og:title" content="服务器用docker配置mysql并本地连接">
 <meta property="og:url" content="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/index.html">
 <meta property="og:site_name" content="红豆刨冰">
-<meta property="og:description" content="12title: 若依代码生成教程及生成代码详解author: 红豆刨冰  若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数">
+<meta property="og:description" content="若依官方代码生成的文档–&gt; https:&#x2F;&#x2F;doc.ruoyi.vip&#x2F;ruoyi&#x2F;document&#x2F;htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90 官方文档太过简略,对新手不友好 单表增删改查1.表生成设计表 表的设计一定要详细完善,考虑周到,这样不用返工  插入示例数据  2.目录生成2.1菜单生成 路由地址–&gt;我也不知道干啥用 2.2">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813153637400.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240815111701734.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816141945758.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240816155331461.png">
 <meta property="article:published_time" content="2024-08-13T07:31:34.758Z">
-<meta property="article:modified_time" content="2024-08-19T15:01:06.095Z">
+<meta property="article:modified_time" content="2024-08-19T15:12:05.844Z">
 <meta property="article:author" content="红豆刨冰">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/KingofKanya/online-picture/master/blog/image-20240813153637400.png">
@@ -104,11 +104,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      服务器用docker配置mysql并本地连接
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 若依代码生成教程及生成代码详解</span><br><span class="line">author: 红豆刨冰</span><br></pre></td></tr></table></figure>
-
-<p>若依官方代码生成的文档–&gt; <a target="_blank" rel="noopener" href="https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90">https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90</a></p>
+        <p>若依官方代码生成的文档–&gt; <a target="_blank" rel="noopener" href="https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90">https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90</a></p>
 <p>官方文档太过简略,对新手不友好</p>
 <h1 id="单表增删改查"><a href="#单表增删改查" class="headerlink" title="单表增删改查"></a>单表增删改查</h1><h2 id="1-表生成"><a href="#1-表生成" class="headerlink" title="1.表生成"></a>1.表生成</h2><p>设计表</p>
 <p>表的设计一定要详细完善,考虑周到,这样不用返工</p>
@@ -199,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" data-id="cm014u38p0005xss81vhuhmwk" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/" data-id="cm014wwjn00060bs873v72tqi" data-title="服务器用docker配置mysql并本地连接" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -250,7 +258,7 @@
       <ul>
         
           <li>
-            <a href="/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/">(no title)</a>
+            <a href="/2024/08/13/%E8%8B%A5%E4%BE%9D%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E6%95%99%E7%A8%8B%E5%8F%8A%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%E8%AF%A6%E8%A7%A3/">服务器用docker配置mysql并本地连接</a>
           </li>
         
           <li>
